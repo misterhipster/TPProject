@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlyCamera : MonoBehaviour
 {
     private Transform transform;
-    public int asd = 0;
+    public int speed = 10;
 
     void Start()
     {
@@ -14,33 +14,22 @@ public class FlyCamera : MonoBehaviour
 
     void Update()
     {
-/*        // Получаем позицию курсора мыши в экранных координатах
-        Vector2 cursorPosition = Input.mousePosition;
-
-        // Конвертируем экранные координаты в координаты относительно видимой области экрана
-        Vector2 viewportPosition = Camera.main.ScreenToViewportPoint(cursorPosition);
-
-        // Получаем координаты относительно игрового окна
-        Vector2 windowPosition = new Vector2(viewportPosition.x * Screen.width, viewportPosition.y * Screen.height);
-
-        // Выводим координаты в консоль
-        Debug.Log("Cursor Position: " + windowPosition);
-*/
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
-            transform.position = new Vector3((float)transform.position.x, (float)transform.position.y, (float)transform.position.z + 1);
+            transform.position += new Vector3(0, 0, speed) * Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            transform.position = new Vector3((float)transform.position.x - 1, (float)transform.position.y, (float)transform.position.z);
+            transform.position += new Vector3(-speed, 0,0) * Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
-            transform.position = new Vector3((float)transform.position.x, (float)transform.position.y, (float)transform.position.z - 1);
+            transform.position += new Vector3(0, 0, -speed) * Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            transform.position = new Vector3((float)transform.position.x+1, (float)transform.position.y, (float)transform.position.z);
+            transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
         }
     }
+
 }
