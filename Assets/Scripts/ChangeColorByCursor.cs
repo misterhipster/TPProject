@@ -23,4 +23,5 @@ public class ChangeColorByCursor : MonoBehaviour
     {
         renderer.material.color=defaultColor;
     }
+
 }

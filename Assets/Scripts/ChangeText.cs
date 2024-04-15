@@ -17,7 +17,7 @@ public class ChangeText : MonoBehaviour
 
     private void TextUpdate()
     {
-        textMeshPro.text = "Число блоков: " + (blockgenerator.columns * blockgenerator.rows);
+        textMeshPro.text = "Блоки: " + (blockgenerator.columns * blockgenerator.rows);
     }
 
     void Update()
