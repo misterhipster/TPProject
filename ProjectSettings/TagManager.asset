@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PlacedStolb
-  - NotPlacedStolb
+  - FreeTile
+  - Stolb
+  - OccupedTile
   layers:
   - Default
   - TransparentFX

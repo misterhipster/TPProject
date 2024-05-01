@@ -1,16 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Blockgenerator : MonoBehaviour
 {
     public GameObject blockPrefab;
-    public int rows = 10;
-    public int columns = 10;
+    [SerializeField] GameObject managerBetweenScenesobj;
+    public int rows;
+    public int columns;
     public float differenceBetweenBlocks = 0.5f;
 
     void Start()
     {
+        // Получаем объект DataManagerBetweenScenes
+        DataManagerBetweenScenes managerBetweenScenes = managerBetweenScenesobj.GetComponent<DataManagerBetweenScenes>();
+
+        // Обновляем значения rows и columns
+        rows = managerBetweenScenes.getScore();
+        columns = managerBetweenScenes.getScore();
+
+        // Генерируем поле
         GenerateField(rows, columns);
     }
 
@@ -20,16 +30,12 @@ public class Blockgenerator : MonoBehaviour
         {
             for (int j = 0; j < columns; j++)
             {
-                //Vector3 position = new Vector3(columns * tileSize, 0.0f, rows * tileSize);
                 Vector3 position = new Vector3(j * differenceBetweenBlocks, 0.0f, i * differenceBetweenBlocks);
 
                 GameObject block = Instantiate(blockPrefab, position, Quaternion.identity);
-                block.name = "Tile_" + (i+1) + "_" + (j+1);
+                block.name = "Tile_" + (i + 1) + "_" + (j + 1);
                 block.SetActive(true);
-
-                //block.transform.position = position;
             }
         }
     }
-
 }

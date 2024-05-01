@@ -1,62 +1,61 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CableConnector : MonoBehaviour
 {
-
-    //public GameObject objectToSpawn;
-    Renderer renderer;
+    public GameObject selectedObject;
+    public Renderer selectedObjectRenderer;
+    public bool isObjectSelected = false;
+    private Color selectColor = Color.green;
     private Color defaultColor;
-    private Color newColor = Color.yellow;
 
-    private void Start()
-    {
-        renderer = GetComponent<Renderer>();
-        defaultColor = renderer.material.color;
-    }
+    [SerializeField] GameObject cableStartPrefab;
 
-    void Update()
+    private void LateUpdate()
     {
-/*        // Проверяем, была ли нажата левая кнопка мыши
+        // Проверяем, было ли совершено нажатие мыши
         if (Input.GetMouseButtonDown(0))
         {
-            //if (!objectSpawned)
-            //{
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            // Получаем объект под указателем мыши
             RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit))
             {
-                // Получаем ссылку на объект, на который попал луч
-                GameObject hitObject = hit.collider.gameObject;
+                GameObject hittedObject= hit.collider.gameObject;
 
-                if (hitObject.tag == "NotPlacedStolb")
+                if (!isObjectSelected && hittedObject.tag=="Stolb")
                 {
-                    // Можно выполнить дополнительные действия с объектом, на который попал луч
-                    hitObject.tag = "PlacedStolb";
+                    selectedObject = hittedObject;
+                    selectedObjectRenderer = selectedObject.GetComponent<Renderer>();
 
-                    Transform hitTransform = hit.transform;
+                    defaultColor = selectedObjectRenderer.material.color;
+                    selectedObjectRenderer.material.color = selectColor;
+                    isObjectSelected = true;
+                }
+                else if (isObjectSelected)
+                {
+                    // Используем координаты selectedObject как стартовую позицию
+                    Vector3 spawnPosition = selectedObject.transform.position + new Vector3(0, 3, 0);
+                    GameObject newCable = Instantiate(cableStartPrefab, spawnPosition, Quaternion.identity);
 
-                    Vector3 spawnPosition = hitTransform.position + new Vector3(0, 1, 0);
-                    GameObject newObject = Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
-                    newObject.transform.Rotate(-90, 0, 0);
-                    //Debug.Log("Object " + objectToSpawn.name + " spawned on object " + hitObject.name);
+                    CableProceduralStatic cableProceduralStatic = newCable.GetComponent<CableProceduralStatic>();
+                    cableProceduralStatic.endPointTransform.position = hittedObject.transform.position + new Vector3(0, 3, 0);
+                    //cableProceduralStatic.endPointTransform.position += new Vector3(0, 3, 0);
 
+                    isObjectSelected = false;
+                    selectedObjectRenderer.material.color=defaultColor;
                 }
             }
-            //}
-        }*/
-    }
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (isObjectSelected)
+            {
+                selectedObjectRenderer.material.color = defaultColor;
+            }
+            isObjectSelected = false;
+        }
 
-    private void OnMouseEnter()
-    {
-        renderer.material.color = newColor;
-    }
-
-    private void OnMouseExit()
-    {
-        renderer.material.color = defaultColor;
     }
 
 }

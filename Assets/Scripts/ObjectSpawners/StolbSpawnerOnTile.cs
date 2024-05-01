@@ -1,17 +1,13 @@
 using UnityEngine;
 
-public class ObjectSpawner : MonoBehaviour
+public class StolbSpawnerOnTile : MonoBehaviour
 {
-    // Объект, который будет спавниться
     public GameObject objectToSpawn;
 
-    void Update()
+    private void Update()
     {
-        // Проверяем, была ли нажата левая кнопка мыши
         if (Input.GetMouseButtonDown(0))
         {
-            //if (!objectSpawned)
-            //{
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -20,10 +16,10 @@ public class ObjectSpawner : MonoBehaviour
                 // Получаем ссылку на объект, на который попал луч
                 GameObject hitObject = hit.collider.gameObject;
 
-                if (hitObject.tag == "NotPlacedStolb")
+                if (hitObject.tag == "FreeTile")
                 {
                     // Можно выполнить дополнительные действия с объектом, на который попал луч
-                    hitObject.tag = "PlacedStolb";
+                    hitObject.tag = "OccupedTile";
 
                     Transform hitTransform = hit.transform;
 
@@ -34,7 +30,6 @@ public class ObjectSpawner : MonoBehaviour
 
                 }
             }
-            //}
         }
     }
 }

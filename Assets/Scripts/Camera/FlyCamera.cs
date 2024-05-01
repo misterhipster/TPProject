@@ -7,12 +7,12 @@ public class FlyCamera : MonoBehaviour
     private Transform transform;
     public int speed = 10;
 
-    void Start()
+    private void Start()
     {
         transform = GetComponent<Transform>();
     }
 
-    void Update()
+    private void Update()
     {
         float verticalInput = Input.GetAxis("Vertical"); // Получаем ввод по вертикали (W и S для движения вперед и назад)
         float horizontalInput = Input.GetAxis("Horizontal"); // Получаем ввод по горизонтали (A и D для движения по оси Y)

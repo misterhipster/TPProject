@@ -20,8 +20,4 @@ public class ChangeText : MonoBehaviour
         textMeshPro.text = "Блоки: " + (blockgenerator.columns * blockgenerator.rows);
     }
 
-    void Update()
-    {
-
-    }
 }

@@ -14,12 +14,12 @@ public class CameraRotate : MonoBehaviour
     // Percentage for this parametr;
     private float areaOfAction = 0.1f;
 
-    void Start()
+    private void Start()
     {
         transform = GetComponent<Transform>();   
     }
 
-    void Update()
+    private void Update()
     {
         Vector2 cursorPosition = new Vector2(Input.mousePosition.x - (Screen.width - windowWidth) / 2,
             Input.mousePosition.y - (Screen.height - windowHeight) / 2);
