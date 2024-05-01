@@ -366,6 +366,8 @@
 "Assets/Scripts/ChangeColor/ChangeColorStolbByCursor.cs"
 "Assets/Scripts/ChangeText.cs"
 "Assets/Scripts/DataManagerBetweenScenes.cs"
+"Assets/Scripts/LinkOnTile.cs"
+"Assets/Scripts/ObjectDeleters/StolbDeletor.cs"
 "Assets/Scripts/ObjectSpawners/Blockgenerator.cs"
 "Assets/Scripts/ObjectSpawners/StolbSpawnerOnTile.cs"
 "Assets/Scripts/SceneLoader.cs"

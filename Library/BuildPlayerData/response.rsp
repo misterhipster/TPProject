@@ -10,6 +10,7 @@
 -a="C:\Users\georg\Desktop\TP_Project\TPProject\Library\PlayerScriptAssemblies\Unity.Services.Core.Configuration.dll"
 -a="C:\Users\georg\Desktop\TP_Project\TPProject\Library\PlayerScriptAssemblies\Unity.Services.Core.dll"
 -a="C:\Users\georg\Desktop\TP_Project\TPProject\Library\PlayerScriptAssemblies\Unity.VisualScripting.Core.dll"
+-a="C:\Users\georg\Desktop\TP_Project\TPProject\Library\PlayerScriptAssemblies\Unity.TerrainTools.dll"
 -a="C:\Users\georg\Desktop\TP_Project\TPProject\Library\PlayerScriptAssemblies\Unity.Services.Core.Analytics.dll"
 -a="C:\Users\georg\Desktop\TP_Project\TPProject\Library\PlayerScriptAssemblies\Unity.Services.Core.Registration.dll"
 -a="C:\Users\georg\Desktop\TP_Project\TPProject\Library\PlayerScriptAssemblies\Unity.Services.Core.Environments.dll"

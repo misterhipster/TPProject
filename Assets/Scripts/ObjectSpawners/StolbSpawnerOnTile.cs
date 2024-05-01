@@ -24,8 +24,11 @@ public class StolbSpawnerOnTile : MonoBehaviour
                     Transform hitTransform = hit.transform;
 
                     Vector3 spawnPosition = hitTransform.position + new Vector3(0, 1, 0);
-                    GameObject newObject = Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
-                    newObject.transform.Rotate(-90, 0, 0);
+                    GameObject newStolb = Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+                    newStolb.transform.Rotate(-90, 0, 0);
+                    // hitObject;
+                    LinkOnTile linkOnTile = newStolb.GetComponent<LinkOnTile>();
+                    linkOnTile.tileLink = hitObject;
                     Debug.Log("Object " + objectToSpawn.name + " spawned on object " + hitObject.name);
 
                 }

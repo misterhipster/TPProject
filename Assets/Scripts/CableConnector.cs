@@ -3,7 +3,7 @@ using UnityEngine;
 public class CableConnector : MonoBehaviour
 {
     public GameObject selectedObject;
-    public Renderer selectedObjectRenderer;
+    public Renderer selectedObjectRenderer=null;
     public bool isObjectSelected = false;
     private Color selectColor = Color.green;
     private Color defaultColor;
@@ -44,16 +44,21 @@ public class CableConnector : MonoBehaviour
 
                     isObjectSelected = false;
                     selectedObjectRenderer.material.color=defaultColor;
+                    selectedObjectRenderer = null;
                 }
             }
         }
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKey(KeyCode.Escape))
         {
             if (isObjectSelected)
             {
-                selectedObjectRenderer.material.color = defaultColor;
+                if (selectedObjectRenderer)
+                {
+                    selectedObjectRenderer.material.color = defaultColor;
+                }
             }
             isObjectSelected = false;
+            selectedObjectRenderer = null;
         }
 
     }
