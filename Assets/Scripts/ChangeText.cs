@@ -5,19 +5,18 @@ using UnityEngine;
 
 public class ChangeText : MonoBehaviour
 {
+    [SerializeField] GameObject priceObject;
+    PriceStats priceStats;
     public TextMeshProUGUI textMeshPro;
-    private Blockgenerator blockgenerator;
 
     private void Start()
     {
-        //textMeshPro.text = "Новый текст";
-        blockgenerator = GetComponent<Blockgenerator>();
-        TextUpdate();
+        priceStats = priceObject.GetComponent<PriceStats>();
     }
 
-    private void TextUpdate()
+    private void FixedUpdate()
     {
-        textMeshPro.text = "Блоки: " + (blockgenerator.columns * blockgenerator.rows);
+        textMeshPro.text = "Суммарная стоимость: " + (priceStats.PriceForStolbs + priceStats.PriceForCables);
     }
 
 }

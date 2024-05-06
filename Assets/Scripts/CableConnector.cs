@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 
 public class CableConnector : MonoBehaviour
 {
+    [SerializeField] GameObject toDelegatePrice;
     public GameObject selectedObject;
-    public Renderer selectedObjectRenderer=null;
+    public Renderer selectedObjectRenderer = null;
     public bool isObjectSelected = false;
     private Color selectColor = Color.green;
     private Color defaultColor;
@@ -21,9 +23,9 @@ public class CableConnector : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                GameObject hittedObject= hit.collider.gameObject;
+                GameObject hittedObject = hit.collider.gameObject;
 
-                if (!isObjectSelected && hittedObject.tag=="Stolb")
+                if (!isObjectSelected && hittedObject.tag == "Stolb")
                 {
                     selectedObject = hittedObject;
                     selectedObjectRenderer = selectedObject.GetComponent<Renderer>();
@@ -34,17 +36,31 @@ public class CableConnector : MonoBehaviour
                 }
                 else if (isObjectSelected)
                 {
-                    // Используем координаты selectedObject как стартовую позицию
                     Vector3 spawnPosition = selectedObject.transform.position + new Vector3(0, 3, 0);
-                    GameObject newCable = Instantiate(cableStartPrefab, spawnPosition, Quaternion.identity);
+                    // Тут вычисляем расстояние между столбами
+                    Vector3 startPosition = spawnPosition;
+                    Vector3 endPosition = hittedObject.transform.position + new Vector3(0, 3, 0);
+                    float distance = (float)Math.Pow(
+                        Mathf.Pow(startPosition.x - endPosition.x, 2) +
+                        Mathf.Pow(startPosition.y - endPosition.y, 2) +
+                        Mathf.Pow(startPosition.z - endPosition.z, 2), 0.5);
 
-                    CableProceduralStatic cableProceduralStatic = newCable.GetComponent<CableProceduralStatic>();
-                    cableProceduralStatic.endPointTransform.position = hittedObject.transform.position + new Vector3(0, 3, 0);
-                    //cableProceduralStatic.endPointTransform.position += new Vector3(0, 3, 0);
+                    if (distance <= 12)
+                    {
+                        // Используем координаты selectedObject как стартовую позицию
+                        GameObject newCable = Instantiate(cableStartPrefab, spawnPosition, Quaternion.identity);
+                        CableProceduralStatic cableProceduralStatic = newCable.GetComponent<CableProceduralStatic>();
+                        cableProceduralStatic.endPointTransform.position = hittedObject.transform.position + new Vector3(0, 3, 0);
+                        
+                        int price = Convert.ToInt32(distance) / 2;
+                        PriceStats priceStats = toDelegatePrice.GetComponent<PriceStats>();
+                        priceStats.PriceForCables += price * 1500;
+                        Debug.Log(price);
 
-                    isObjectSelected = false;
-                    selectedObjectRenderer.material.color=defaultColor;
-                    selectedObjectRenderer = null;
+                        isObjectSelected = false;
+                        selectedObjectRenderer.material.color = defaultColor;
+                        selectedObjectRenderer = null;
+                    }
                 }
             }
         }

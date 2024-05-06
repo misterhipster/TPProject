@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Test Runner
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1644
+  controlID: 132
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1397
+    width: 1396
     height: 947
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 1645
+  controlID: 64
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1397
+    width: 1396
     height: 590
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1646
+  controlID: 65
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,9 +191,9 @@ MonoBehaviour:
     height: 590
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 13}
+  - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &9
@@ -206,23 +206,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 289
     y: 0
-    width: 1108
+    width: 1107
     height: 590
-  m_MinSize: {x: 202, y: 221}
+  m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 14}
+  - {fileID: 15}
+  - {fileID: 13}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,23 +234,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 590
-    width: 1397
+    width: 1396
     height: 357
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 1
-  m_LastSelected: 0
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,18 +266,329 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1397
+    x: 1396
     y: 0
-    width: 523
+    width: 524
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 17}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1569
+    y: 73
+    width: 1105
+    height: 569
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Spl:
+    ID: 1000
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 374
+    - 125
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 499
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 1
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 12}
+    m_NewResultList:
+    - id: 1005
+      uniqueId: '[TPProject][suite]'
+      name: TPProject
+      fullName: TPProject
+      resultStatus: 2
+      duration: 0.2844007
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    m_ResultText: 'Tests.dll (0,202s)
+
+      ---
+
+      One or more child tests had
+      errors'
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 6a3bd17b
+      m_LastClickedID: 2077309802
+      m_ExpandedIDs: 7a6464906a3bd17bef8f5a7cffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 12}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[TPProject][suite]'
+      name: TPProject
+      fullName: TPProject
+      resultStatus: 2
+      duration: 0.350717
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1007
+      uniqueId: '[Tests][C:/Users/georg/Desktop/TP_Project/TPProject/Library/ScriptAssemblies/Tests.dll][suite]'
+      name: Tests.dll
+      fullName: C:/Users/georg/Desktop/TP_Project/TPProject/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 2
+      duration: 0.2722762
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[TPProject][suite]'
+    - id: 1001
+      uniqueId: Tests.dll/[Tests][MyTestScript][suite]
+      name: MyTestScript
+      fullName: MyTestScript
+      resultStatus: 2
+      duration: 0.2668649
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1007
+      parentUniqueId: '[Tests][C:/Users/georg/Desktop/TP_Project/TPProject/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1005
+      uniqueId: Tests.dll/MyTestScript/[Tests][MyTestScript.CameraRotate_WhenCursorPositionIsInsideAreaOfAction_RotatesCameraClockwise]
+      name: CameraRotate_WhenCursorPositionIsInsideAreaOfAction_RotatesCameraClockwise
+      fullName: MyTestScript.CameraRotate_WhenCursorPositionIsInsideAreaOfAction_RotatesCameraClockwise
+      resultStatus: 2
+      duration: 0.0469846
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 'Can''t add script behaviour CameraRotate because it is an editor script.
+        To attach a script it needs to be outside the ''Editor'' folder.
+
+'
+      stacktrace: "  at MyTestScript+<CameraRotate_WhenCursorPositionIsInsideAreaOfAction_RotatesCameraClockwise>d__3.MoveNext
+        () [0x0005f] in C:\\Users\\georg\\Desktop\\TP_Project\\TPProject\\Assets\\Scripts\\Tests\\NewTestScript.cs:83
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\\Users\\georg\\Desktop\\TP_Project\\TPProject\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][MyTestScript][suite]
+    - id: 1006
+      uniqueId: Tests.dll/MyTestScript/[Tests][MyTestScript.CameraRotate_WhenCursorPositionIsOutsideAreaOfAction_DoesNotRotateCamera]
+      name: CameraRotate_WhenCursorPositionIsOutsideAreaOfAction_DoesNotRotateCamera
+      fullName: MyTestScript.CameraRotate_WhenCursorPositionIsOutsideAreaOfAction_DoesNotRotateCamera
+      resultStatus: 2
+      duration: 0.1194001
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 'Can''t add script behaviour CameraRotate because it is an editor script.
+        To attach a script it needs to be outside the ''Editor'' folder.
+
+'
+      stacktrace: "  at MyTestScript+<CameraRotate_WhenCursorPositionIsOutsideAreaOfAction_DoesNotRotateCamera>d__4.MoveNext
+        () [0x0005f] in C:\\Users\\georg\\Desktop\\TP_Project\\TPProject\\Assets\\Scripts\\Tests\\NewTestScript.cs:115
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\\Users\\georg\\Desktop\\TP_Project\\TPProject\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][MyTestScript][suite]
+    - id: 1004
+      uniqueId: Tests.dll/MyTestScript/[Tests][MyTestScript.CameraRotate_WhenRotationSpeedIsNegative_RotatesCameraCounterClockwise]
+      name: CameraRotate_WhenRotationSpeedIsNegative_RotatesCameraCounterClockwise
+      fullName: MyTestScript.CameraRotate_WhenRotationSpeedIsNegative_RotatesCameraCounterClockwise
+      resultStatus: 2
+      duration: 0.0092985
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 'Can''t add script behaviour CameraRotate because it is an editor script.
+        To attach a script it needs to be outside the ''Editor'' folder.
+
+'
+      stacktrace: "  at MyTestScript+<CameraRotate_WhenRotationSpeedIsNegative_RotatesCameraCounterClockwise>d__2.MoveNext
+        () [0x0005c] in C:\\Users\\georg\\Desktop\\TP_Project\\TPProject\\Assets\\Scripts\\Tests\\NewTestScript.cs:56
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\\Users\\georg\\Desktop\\TP_Project\\TPProject\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][MyTestScript][suite]
+    - id: 1003
+      uniqueId: Tests.dll/MyTestScript/[Tests][MyTestScript.CameraRotate_WhenRotationSpeedIsPositive_RotatesCameraClockwise]
+      name: CameraRotate_WhenRotationSpeedIsPositive_RotatesCameraClockwise
+      fullName: MyTestScript.CameraRotate_WhenRotationSpeedIsPositive_RotatesCameraClockwise
+      resultStatus: 2
+      duration: 0.0171419
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 'Can''t add script behaviour CameraRotate because it is an editor script.
+        To attach a script it needs to be outside the ''Editor'' folder.
+
+'
+      stacktrace: "  at MyTestScript+<CameraRotate_WhenRotationSpeedIsPositive_RotatesCameraClockwise>d__1.MoveNext
+        () [0x0005c] in C:\\Users\\georg\\Desktop\\TP_Project\\TPProject\\Assets\\Scripts\\Tests\\NewTestScript.cs:29
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\\Users\\georg\\Desktop\\TP_Project\\TPProject\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][MyTestScript][suite]
+    - id: 1002
+      uniqueId: Tests.dll/MyTestScript/[Tests][MyTestScript.MyTestScriptSimplePasses]
+      name: MyTestScriptSimplePasses
+      fullName: MyTestScript.MyTestScriptSimplePasses
+      resultStatus: 1
+      duration: 0.0132336
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][MyTestScript][suite]
+    m_ResultText: 'MyTestScript (0,267s)
+
+      ---
+
+      One or more child tests
+      had errors'
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 7a646490
+      m_LastClickedID: -1872468870
+      m_ExpandedIDs: 1cfbc7827a64649022524b3a6a3bd17bef8f5a7cffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,7 +610,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1569
     y: 73
-    width: 1106
+    width: 1105
     height: 569
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -310,7 +622,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 974, y: 548}
+  m_TargetSize: {x: 1105, y: 548}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -319,14 +631,14 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 01000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -487
-    m_HBaseRangeMax: 487
+    m_HBaseRangeMin: -552.5
+    m_HBaseRangeMax: 552.5
     m_VBaseRangeMin: -274
     m_VBaseRangeMax: 274
     m_HAllowExceedBaseRangeMin: 1
@@ -346,29 +658,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1106
+      width: 1105
       height: 548
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 553, y: 274}
+    m_Translation: {x: 552.5, y: 274}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -553
+      x: -552.5
       y: -274
-      width: 1106
+      width: 1105
       height: 548
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1106, y: 569}
+  m_LastWindowPixelSize: {x: 1105, y: 569}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399,9 +711,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: a4f6fbfff2f6fbff5af8fbff70f8fbff20fbffff665d000082630000
+      m_SelectedIDs: ba690000
+      m_LastClickedID: 27066
+      m_ExpandedIDs: 82cbfaff8c71feffc671feffcc72feff8a74feffa675feff0278feffde7afeff6e7bfeff967cfeff267dfefff07ffeff0880feff3084feff6e84feffc685feff6088feff9e88feffd289fefff60affff160bffff22fbfffff4ffffffa05c0000a45c0000ca5c0000ba5f0000006a00002a6a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -425,7 +737,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -447,7 +759,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1569
     y: 73
-    width: 1106
+    width: 1105
     height: 569
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -458,8 +770,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -101, y: -26}
+      snapOffset: {x: -101, y: -26}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -469,9 +781,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -141, y: 149}
+      snapOffset: {x: -141, y: -195.66666}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
+      snapCorner: 3
       id: unity-grid-and-snap-toolbar
       index: 1
       layout: 1
@@ -650,9 +962,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 8.0447035, y: -7.639071, z: 16.804794}
+    m_Target: {x: 17.733683, y: 3.6758137, z: 3.170301}
     speed: 2
-    m_Value: {x: 8.0447035, y: -7.639071, z: 16.804794}
+    m_Value: {x: 17.733683, y: 3.6758137, z: 3.170301}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -699,13 +1011,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.25834534, y: 0.0020260315, z: -0.000541692, w: -0.9660505}
+    m_Target: {x: 0.10372335, y: 0.16128674, z: -0.017047781, w: 0.9812947}
     speed: 2
-    m_Value: {x: -0.2583453, y: 0.0020260313, z: -0.00054169196, w: -0.9660504}
+    m_Value: {x: 0.10372326, y: 0.1612866, z: -0.017047767, w: 0.98129386}
   m_Size:
-    m_Target: 14.805235
+    m_Target: 1.4909059
     speed: 2
-    m_Value: 14.805235
+    m_Value: 1.4909059
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -723,14 +1035,14 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.0108019905, y: 0.038085572, z: -0.0004119477, w: -0.9992174}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -752,7 +1064,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1280
     y: 663
-    width: 1396
+    width: 1395
     height: 336
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -771,22 +1083,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/ObjectSpawners
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 89
   m_LastFolders:
-  - Assets/Scripts/ObjectSpawners
+  - Assets/Scripts
   m_LastFoldersGridSize: 89
   m_LastProjectPath: C:\Users\georg\Desktop\TP_Project\TPProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 2c640000
-    m_LastClickedID: 25644
-    m_ExpandedIDs: 00000000d05d0000ea5d000000ca9a3b
+    scrollPos: {x: 0, y: 23}
+    m_SelectedIDs: a45d0000
+    m_LastClickedID: 23972
+    m_ExpandedIDs: 000000009a5d0000a45d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -814,7 +1126,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d05d000000ca9a3b
+    m_ExpandedIDs: 000000009a5d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -870,7 +1182,7 @@ MonoBehaviour:
     m_GridSize: 89
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -891,14 +1203,14 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1280
-    y: 663
-    width: 1396
-    height: 336
+    y: 662
+    width: 1395
+    height: 337
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -918,9 +1230,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2677
+    x: 2676
     y: 73
-    width: 522
+    width: 523
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:

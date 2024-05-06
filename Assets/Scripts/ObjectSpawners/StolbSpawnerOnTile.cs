@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class StolbSpawnerOnTile : MonoBehaviour
 {
+    [SerializeField] GameObject toDelegatePrice;
     public GameObject objectToSpawn;
 
     private void Update()
@@ -30,7 +31,9 @@ public class StolbSpawnerOnTile : MonoBehaviour
                     LinkOnTile linkOnTile = newStolb.GetComponent<LinkOnTile>();
                     linkOnTile.tileLink = hitObject;
                     Debug.Log("Object " + objectToSpawn.name + " spawned on object " + hitObject.name);
-
+                    PriceStats priceStats = toDelegatePrice.GetComponent<PriceStats>();
+                    priceStats.PriceForStolbs += 3500;
+                    Debug.Log(3500);
                 }
             }
         }

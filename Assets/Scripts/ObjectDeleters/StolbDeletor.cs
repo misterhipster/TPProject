@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StolbDeletor : MonoBehaviour
 {
+    [SerializeField] GameObject toDelegatePrice;
     private Renderer selectedRenderer=null;
     private bool selected = false;
     private GameObject selectedObject;
@@ -37,6 +38,8 @@ public class StolbDeletor : MonoBehaviour
                         Destroy(hittedObject);
                         selectedRenderer = null;
                         selected = false;
+                        PriceStats priceStats = toDelegatePrice.GetComponent<PriceStats>();
+                        priceStats.PriceForStolbs -= 3500;
                     }
                 }
 
